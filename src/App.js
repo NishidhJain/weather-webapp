@@ -67,10 +67,11 @@ function App() {
       </div>
 
       {/* <h1>Weather Webapp</h1> */}
-      <div className="app-container rain">
+      {/* <div className="app__bottom">
+        <ul className="daily__forecast__list">
 
-
-      </div>
+        </ul>
+      </div> */}
 
 
     </div>

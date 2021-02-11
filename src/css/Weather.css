@@ -22,6 +22,10 @@
     text-align: left;
 }
 
+.right{
+    text-align: right;
+}
+
 .weather__icon{
     color: #fff;
     font-size: 6rem;
@@ -58,7 +62,7 @@
 @media (max-width: 450px){
 
     .weather__mainData{
-        margin-top: 15px;
+        margin-top: 20px;
         /* padding: 0 20px; */
     }
     .weather__icon{
