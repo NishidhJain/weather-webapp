@@ -1,20 +1,24 @@
 .search{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    /* margin-top: 30px; */
 }
 
 .search__form{
     width: 100%;
-    background-color: #f0f8ff;
+    /* background-color: #f0f8ff; */
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 15px;
+    padding: 5px 15px;
 }
 
 .search__icon{
    width: 10%;
    font-size: 1.2rem;
+   color: #fff;
 }
 
 .search__inpt{
@@ -23,21 +27,25 @@
     outline: none;
     padding: 10px 15px;
     background: transparent;
+    color: #fff;
 }
 .search__inpt::placeholder{
     font-size: 1.1rem;
     letter-spacing: 1px;
+    color: #fff;
 }
 .search__inpt:focus{
     font-size: 1.1rem;
+    color: #fff;
+
 }
 
 .search__btn{
     /* max-width: 15%; */
-    padding: 10px 30px; 
+    padding: 10px 20px; 
     /* margin-right: 20px; */
     border-radius: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border: none;
     outline: none;
 }
