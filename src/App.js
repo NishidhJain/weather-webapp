@@ -5,16 +5,20 @@ import Weather from './components/Weather';
 
 function App() {
 
-  const [data, setData] = React.useState({})
-  const API_KEY = '70abe5234a96fd06a01426ddd67f11c1';
+  const [data, setData] = React.useState({});
+
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const oneCallAPI_URL = 'https://api.openweathermap.org/data/2.5/onecall';
+
+  // console.log(process.env);
 
   // console.log(data.length);
   const getData = async (query) => {
     // console.log('get Data called, query is:', query);
 
-    const queryURL = `${url}${query}&units=metric&appid=${API_KEY}`;
+
+
+    const queryURL = `${url}${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
 
     try {
       const res = await fetch(queryURL);
@@ -27,10 +31,10 @@ function App() {
 
         const { coord } = jsonResponse;
 
-        const oneAPI = `${oneCallAPI_URL}?lat=${coord.lat}&lon=${coord.lon}&appid=${API_KEY}`;
+        const oneAPI = `${oneCallAPI_URL}?lat=${coord.lat}&lon=${coord.lon}&appid=${process.env.REACT_APP_API_KEY}`;
 
         const oneCallResponse = await fetch(oneAPI);
-        console.log('one call Api', oneCallResponse);
+        // console.log('one call Api', oneCallResponse);
         const oneCallJSON = await oneCallResponse.json();
         console.log('one call json', oneCallJSON);
       }
