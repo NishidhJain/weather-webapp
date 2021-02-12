@@ -92,6 +92,18 @@
   /* background-color: #fff; */
 }
 
+.app__bottomTitle{
+  color: #263d45;
+  margin-bottom: 5px;
+}
+
+.underline{
+  height: 3px;
+  width: 50px;
+  background-color: #263d45;
+  margin: 0 auto;
+}
+
 @media (orientation: portrait)
 {
   .app__container{
