@@ -1,0 +1,36 @@
+.daily__weatherList{
+    
+}
+
+.daily__weatherList{
+    width: 90%;
+    margin: 0 auto;
+    color: #263d45;
+    font-weight: 600;
+}
+
+.daily__weatherItem{
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    align-items: center;
+    /* border-bottom: 2px dashed #263d45 ; */
+}
+
+.daily__weatherDay{
+    text-align: left;
+}
+
+.daily__weatherIcon{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    /* padding-left: 10px; */
+}
+
+.daily__maxTemp,
+.daily__minTemp {
+ text-align: right;
+}
