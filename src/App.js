@@ -8,6 +8,7 @@ function App() {
 
   const [data, setData] = React.useState({});
   const [forecastData, setForecastData] = React.useState(null);
+  const [error, setError] = React.useState('');
 
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const oneCallAPI_URL = 'https://api.openweathermap.org/data/2.5/onecall';
@@ -16,6 +17,9 @@ function App() {
 
   // console.log(data.length);
   const getData = async (query) => {
+
+    // reset the error
+    setError('');
     // console.log('get Data called, query is:', query);
 
     const queryURL = `${url}${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
@@ -40,12 +44,24 @@ function App() {
         console.log('one call json', oneCallJSON);
       }
       else {
+        // setData({})
         setForecastData(null);
       }
     }
     catch (err) {
-      console.log('err occured', err);
+      console.log('err occured', err.message);
+      // covert the err message to lowercase and check for network err
+      const errMsg = err.message.toLowerCase();
+      console.log(errMsg);
 
+      // check if the string exist in the message, if not then '-1'
+      if (errMsg.search('networkerror') >= 0) {
+        console.log('inside if');
+        setError('Network Error Occured');
+      }
+      else {
+        console.log('inside else');
+      }
     }
   }
   // console.log('data value updated', data);
@@ -65,6 +81,14 @@ function App() {
               <h3 className="error__msg">{data.message}</h3>
             </div>)
           }
+          {
+            error ? (
+              <div className="networkErr error__container">
+                <h3 className="networkErr__msg">{error}</h3>
+                <p className="networkErr__warning">Please check your internet connection</p>
+              </div>
+            ) : ''
+          }
 
 
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="wave">
@@ -75,10 +99,9 @@ function App() {
         </div>
 
         <div className="app__bottom">
-          <h3 className="app__bottomTitle">Daily Forecast</h3>
-          <div className="underline"></div>
 
-          {forecastData ? (<DailyForecast forecastData={forecastData} />) : 'No Data Found'}
+
+          {forecastData ? (<DailyForecast forecastData={forecastData} />) : ''}
 
 
           {/* <ul className="daily__forecast__list">

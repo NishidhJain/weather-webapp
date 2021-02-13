@@ -31,6 +31,9 @@ function DailyForecast({ forecastData }) {
 
     return (
         <div className="daily__weatherList">
+            <h3 className="app__bottomTitle">Daily Forecast</h3>
+            <div className="underline"></div>
+
             {
                 requiredData.map(item => {
                     return (

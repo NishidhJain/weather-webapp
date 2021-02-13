@@ -68,7 +68,7 @@
   margin: 0;
   position: relative;
   height: 60%;
-  background-image: url('./assets/bgImg.jpg');
+  background-image: url('./assets/background-Img.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-top-left-radius: 30px;
@@ -108,14 +108,16 @@
 
 .error__container{
   margin-top: 50px;
+  color: #fff;
 }
 
 .error__msg{
-  color: #fff;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
+
+
 
 @media (orientation: portrait)
 {
