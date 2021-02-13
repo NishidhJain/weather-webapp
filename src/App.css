@@ -39,6 +39,7 @@
 .app__container{
   position: relative;
   height: 80vh;
+  max-height: 780px;
   width: 100%;
   max-width: 400px;
   /* background-color: rgb(202, 233, 251); */
@@ -105,10 +106,21 @@
   margin-bottom: 10px;
 }
 
+.error__container{
+  margin-top: 50px;
+}
+
+.error__msg{
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
 @media (orientation: portrait)
 {
   .app__container{
-    height: 95vh;
+    height: 100vh;
     /* width: 80%; */
   }
 }

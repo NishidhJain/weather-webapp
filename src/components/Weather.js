@@ -28,7 +28,7 @@ function Weather({ weatherData }) {
         <div className="weather">
             <div className="weather__mainData">
                 <div className="left">
-
+                    {/* <img src={`${iconURL}${weather[0].icon}@2x.png`} alt="weather_icon" className="weather__icon" /> */}
                     <TiWeatherPartlySunny className="weather__icon" />
                     <h4 className="weather__condition">{weather[0].description}</h4>
                 </div>
@@ -38,7 +38,7 @@ function Weather({ weatherData }) {
 
                 </div>
 
-                {/* <img src={`${iconURL}${weather[0].icon}@2x.png`} alt="weather_icon" className="weather__icon" />
+                {/* 
                 <h4 className="waether__humidity">{main.humidity}%</h4> */}
             </div>
             <div className="weather__otherData">

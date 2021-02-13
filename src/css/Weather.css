@@ -5,10 +5,10 @@
     object-fit: contain;
 }
 
-.weather{
-    /* min-height: 50vh; */
-    /* text-align: center; */
-}
+/* .weather{
+    min-height: 50vh;
+    text-align: center;
+} */
 
 .weather__mainData{
     display: flex;

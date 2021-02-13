@@ -39,9 +39,13 @@ function App() {
         setForecastData(oneCallJSON);
         console.log('one call json', oneCallJSON);
       }
+      else {
+        setForecastData(null);
+      }
     }
     catch (err) {
       console.log('err occured', err);
+
     }
   }
   // console.log('data value updated', data);
@@ -56,7 +60,11 @@ function App() {
 
           <Search getData={getData} />
 
-          {data.cod == '200' ? (<Weather weatherData={data} />) : data.message}
+          {data.cod == '200' ? (<Weather weatherData={data} />) :
+            (<div className="error__container">
+              <h3 className="error__msg">{data.message}</h3>
+            </div>)
+          }
 
 
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="wave">
