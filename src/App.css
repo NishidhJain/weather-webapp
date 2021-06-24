@@ -19,7 +19,6 @@
   background-color: rgb(156, 190, 211);
 } */
 
-
 /* from webapp */
 
 .app {
@@ -36,7 +35,7 @@
   /* background: #fff; */
 }
 
-.app__container{
+.app__container {
   position: relative;
   height: 80vh;
   max-height: 780px;
@@ -47,14 +46,14 @@
   border-radius: 30px;
   /* padding: 10px; */
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  border: 10px solid #fff;
+  border: 10px solid #eee;
 }
 
-.app__container::before{
-  content: '';
+.app__container::before {
+  content: "";
   width: 40%;
   height: 2vh;
-  background-color: white;
+  background-color: #eee;
   position: absolute;
   top: 0;
   left: 50%;
@@ -64,41 +63,41 @@
   z-index: 100;
 }
 
-.app__top{
+.app__top {
   margin: 0;
   position: relative;
   height: 60%;
-  background-image: url('./assets/background-Img.jpg');
+  background-image: url("./assets/background-Img2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
 }
 
-.bg-img{
+.bg-img {
   width: 100%;
   height: 48vh;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.wave{
+.wave {
   position: absolute;
   bottom: -2px;
   left: 0;
 }
 
-.space__container{
+.space__container {
   height: 10%;
   /* background-color: #fff; */
 }
 
-.app__bottomTitle{
+.app__bottomTitle {
   color: #263d45;
   margin-bottom: 5px;
 }
 
-.underline{
+.underline {
   height: 3px;
   width: 50px;
   background-color: #263d45;
@@ -106,25 +105,20 @@
   margin-bottom: 10px;
 }
 
-.error__container{
+.error__container {
   margin-top: 50px;
   color: #fff;
 }
 
-.error__msg{
+.error__msg {
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
 
-
-
-@media (orientation: portrait)
-{
-  .app__container{
+@media (orientation: portrait) {
+  .app__container {
     height: 100vh;
     /* width: 80%; */
   }
 }
-
-
